@@ -8,7 +8,7 @@
                 @mouseover.stop="isHover()"
                 @mouseleave.stop="isNotHover()"
                 @click="$emit('click')">
-            {{ isHovered ? hoverLabel : label }}
+            {{ isHovered ? hoverLabel : label || 'Remove'}}
             <i class="ti-trash"></i>
         </button>
     </div>
