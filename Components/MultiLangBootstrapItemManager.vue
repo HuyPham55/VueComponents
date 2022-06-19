@@ -26,7 +26,7 @@
         <div class="tab-content">
             <section v-for="(value, key, index) in langs"
                      :id="`multi_lang_bootstrap_item_manager_${key}`"
-                     :class="`tab-pane fade container p-0 ${index===0?'active show':''}`">
+                     :class="`tab-pane fade p-0 ${index===0?'active show':''}`">
                 <transition-group name="fade" mode="out-in">
                     <div class="col text-center p-3 bg-light font-italic" v-show="this.items.length===0">No items found.</div>
                     <div v-for="(item, index) in items"

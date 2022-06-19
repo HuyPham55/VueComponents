@@ -18,7 +18,7 @@
                 </div>
             </div>
         </slot>
-        <section class="tab-pane container p-0">
+        <section class="tab-pane p-0">
             <transition-group name="fade">
                 <div
                     v-for="(item, index) in items"
