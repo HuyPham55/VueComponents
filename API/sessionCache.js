@@ -11,5 +11,8 @@ export const sessionCache = {
     },
     clear: function(key) {
         window.sessionStorage.removeItem(key);
+    },
+    has: function(key) {
+        return this.load(key) !== null;
     }
 }

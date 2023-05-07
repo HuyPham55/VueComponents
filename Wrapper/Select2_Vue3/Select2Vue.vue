@@ -19,15 +19,16 @@ const emit = defineEmits(["update:modelValue", 'change'])
 onMounted(() => {
     $(_default.value)
         .select2({
+            theme: "classic",
             data: props.options
         })
         .val(props.modelValue)
         //Set pre-selected option
-        .trigger("change")
         .on("change", function () {
             let selectedValue = this.value;
             emit('update:modelValue', selectedValue)
         })
+        .trigger("change")
 });
 
 onUnmounted(() => {
@@ -41,8 +42,14 @@ watch(() => props.options, () => {
     $(_default.value)
         .empty()
         .select2({
+            theme: "classic",
             data: props.options
         })
+})
+watch(() => props.modelValue, (newValue) => {
+    $(_default.value)
+        .val(newValue)
+        .trigger('change');
 })
 </script>
 
