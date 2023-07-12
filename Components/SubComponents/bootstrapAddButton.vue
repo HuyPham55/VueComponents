@@ -3,7 +3,7 @@
             :class="['btn m-3', isDisabled?'btn-danger':'btn-primary']"
             @click="clickHandler()"
             :disabled="isDisabled">
-        <i class="fas fa-plus"></i>
+        <i class="fas fa-plus mr-2"></i>
         <slot>&nbsp Add</slot>
     </button>
 </template>
