@@ -3,8 +3,8 @@
             :class="['btn m-3', isDisabled?'btn-danger':'btn-outline-danger']"
             @click="clickHandler()"
             :disabled="isDisabled">
-        <i class="fas fa-eraser"></i>
-        <slot>&nbsp Clear all</slot>
+        <i class="fas fa-eraser mr-2"></i>
+        <slot>Clear all</slot>
     </button>
 </template>
 
